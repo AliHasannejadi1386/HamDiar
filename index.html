@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#f7f8f3" />
+    <meta
+      name="description"
+      content="هم‌دیار، تجربهٔ مشارکت و یادگیری در محله‌های منطقهٔ ۱۸ تهران"
+    />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="icon" href="./assets/mark.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./assets/icon-192.png" />
+    <link
+      rel="preload"
+      href="./fonts/vazirmatn.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="./style.css?v=1.4.0" />
+    <link rel="stylesheet" href="./game.css?v=1.4.0" />
+    <link rel="stylesheet" href="./zero-world.css?v=1.4.0" />
+    <link rel="stylesheet" href="./casual-arcade.css?v=1.4.0" />
+    <title>هم‌دیار | محلهٔ من</title>
+  </head>
+  <body>
+    <a class="skip" href="#content">رفتن به محتوا</a>
+    <header id="header" class="site-header"></header>
+    <main id="content" class="container" tabindex="-1"></main>
+    <footer id="footer" class="site-footer container"></footer>
+    <nav id="mobile-nav" aria-label="منوی اصلی موبایل"></nav>
+    <dialog id="dialog" aria-labelledby="dialog-title"></dialog>
+    <dialog
+      id="teaser-dialog"
+      class="teaser-dialog"
+      aria-labelledby="teaser-title"
+    >
+      <div class="teaser-head">
+        <h2 id="teaser-title">تیزر هم‌دیار</h2>
+        <button
+          type="button"
+          class="icon-button"
+          data-action="close-teaser"
+          aria-label="بستن تیزر"
+        >
+          ×
+        </button>
+      </div>
+      <video
+        id="teaser-video"
+        controls
+        playsinline
+        preload="none"
+        poster="./assets/teaser-poster.webp"
+        src="./assets/teaser.mp4"
+        aria-label="ویدیوی معرفی هم‌دیار"
+      ></video>
+      <p id="video-error" hidden>
+        پخش ویدیو در این مرورگر ممکن نشد.
+        <a href="./assets/teaser.mp4" target="_blank" rel="noopener"
+          >باز کردن فایل تیزر</a
+        >
+      </p>
+    </dialog>
+    <div role="status" aria-live="polite" id="toast"></div>
+    <script type="module" src="./app.js?v=1.4.0"></script>
+  </body>
+</html>

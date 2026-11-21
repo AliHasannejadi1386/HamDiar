@@ -1,0 +1,566 @@
+.world-portals {
+  margin: 22px 0;
+}
+.world-market-entry {
+  margin-bottom: 18px;
+}
+.world-market-entry .content-card > img {
+  height: clamp(170px, 24vw, 270px);
+  object-position: center 58%;
+}
+.world-portal-grid,
+.world-product-grid,
+.world-companion-grid,
+.world-badge-grid,
+.world-games-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(12px, 2vw, 24px);
+}
+.world-portal {
+  min-height: clamp(132px, 14vw, 210px);
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: end;
+  overflow: hidden;
+  border-radius: 20px;
+  color: #fff5df;
+  background: #1c3045;
+  border: 2px solid #223d53;
+  box-shadow: 0 4px 0 #afc5ca;
+  transition: transform 0.16s ease;
+}
+.world-portal:hover,
+.world-portal:focus-visible {
+  transform: translateY(-3px);
+}
+.world-portal img,
+.world-head > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+.world-portal img {
+  object-position: center 43%;
+}
+.world-portal::before,
+.world-head:has(img)::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    #142638 3%,
+    #14263885 43%,
+    transparent 85%
+  );
+}
+.world-portal > div {
+  padding: 11px 14px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 2px 8px;
+  align-items: center;
+}
+.world-portal b {
+  font-size: 1.14rem;
+}
+.world-portal span {
+  font-size: 0.86rem;
+  grid-column: 2;
+}
+.world-portal svg {
+  color: #ffd576;
+}
+.world-guide {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin-top: 13px;
+  padding: 9px 12px;
+  background: #eef7ee;
+  border: 1px solid #d4e5d7;
+  border-radius: 17px;
+}
+.world-guide div {
+  flex: 1;
+  min-width: 0;
+}
+.world-guide p {
+  color: #3d5a4d;
+}
+.companion-pic {
+  display: block;
+  width: 52px;
+  height: 52px;
+  flex: 0 0 auto;
+  border-radius: 15px;
+  border: 2px solid #e5c582;
+  background: #f3ebd7 url("./assets/zero-team.webp") no-repeat 51% 27% / 355%
+    auto;
+}
+.companion-pic.storyteller {
+  background-position: 12% 37%;
+  border-color: #d2aedf;
+}
+.companion-pic.teammate {
+  background-position: 82% 44%;
+  border-color: #abd1b7;
+}
+.companion-pic.robot {
+  object-fit: contain;
+  background: #e3f2eb;
+  border-color: #a8d5c8;
+}
+.zero-guide .companion-pic {
+  width: clamp(64px, 8vw, 112px);
+  height: clamp(64px, 8vw, 112px);
+}
+.tutorial-guide-line .companion-pic {
+  width: 70px;
+  height: 70px;
+  margin-inline-start: auto;
+}
+.world-head {
+  min-height: 176px;
+  display: flex;
+  align-items: center;
+  isolation: isolate;
+  position: relative;
+  overflow: hidden;
+  color: #fff4dc;
+  border-radius: 24px;
+  border: 1px solid #28455a;
+  background:
+    radial-gradient(ellipse at 15% 0%, #315e66, transparent 55%),
+    linear-gradient(115deg, #18283d, #192e45);
+  box-shadow: 0 6px 0 #cfdbdb;
+}
+.world-head:has(img) {
+  min-height: clamp(220px, 24vw, 340px);
+}
+.world-head:has(img)::before {
+  background: linear-gradient(
+    to left,
+    #142638 7%,
+    #142638bf 38%,
+    transparent 87%
+  );
+}
+.world-head img {
+  object-position: center 47%;
+}
+.world-head > div {
+  max-width: 480px;
+  padding: clamp(18px, 3vw, 40px);
+}
+.world-head h1 {
+  font-size: clamp(1.95rem, 4.8vw, 3.5rem);
+  font-weight: 950;
+  line-height: 1.18;
+}
+.world-head p {
+  color: #e5eef3;
+  margin-top: 8px;
+}
+.world-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 19px 0 16px;
+}
+.world-nav .active {
+  background: #223850;
+  border-color: #223850;
+  color: #ffe8b2;
+}
+.world-games-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.world-game,
+.world-game-start,
+.world-screen,
+.world-product,
+.world-reading,
+.world-companion-card,
+.world-badge {
+  min-width: 0;
+  overflow: hidden;
+  background: #fffefa;
+  border: 1px solid #d6e4d8;
+  border-radius: 19px;
+  box-shadow: 0 4px 0 #d1dfd1;
+}
+.world-game > img,
+.world-game-start > img,
+.world-reading > img {
+  width: 100%;
+  height: clamp(180px, 25vw, 325px);
+  object-fit: cover;
+  object-position: center 48%;
+}
+.world-card-body {
+  display: grid;
+  gap: 10px;
+  padding: clamp(12px, 2vw, 22px);
+}
+.world-card-body h2,
+.world-companion-card h2 {
+  font-size: clamp(1.05rem, 2.5vw, 1.4rem);
+  line-height: 1.35;
+}
+.world-card-body p,
+.world-companion-card p {
+  color: #42594e;
+}
+.world-card-body > .btn {
+  justify-self: start;
+}
+.world-status {
+  display: inline-block;
+  color: #574321;
+  background: #fff1cd;
+  border-radius: 999px;
+  padding: 4px 10px;
+  width: fit-content;
+  font-size: 0.85rem;
+  font-weight: 800;
+}
+.world-product.detail {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(250px, 0.8fr);
+  align-items: center;
+}
+.world-product figure {
+  margin: 0;
+}
+.world-product figure figcaption {
+  padding: 7px 12px;
+  background: #eef4ec;
+  color: #405d4e;
+  font-size: 0.85rem;
+}
+.product-art {
+  min-height: clamp(140px, 18vw, 245px);
+  background: #e6bf9a url("./assets/zero-collectibles.webp") no-repeat 0% 49% /
+    235% auto;
+}
+.product-art.figure {
+  background-position: 48% 54%;
+}
+.product-art.stickers {
+  background-position: 100% 57%;
+}
+.world-product.detail .product-art {
+  min-height: clamp(220px, 36vw, 440px);
+}
+.world-game-start,
+.world-screen,
+.world-reading,
+.arcade-board,
+.world-game-result {
+  width: min(100%, 790px);
+  margin-inline: auto;
+}
+.world-screen-frame {
+  position: relative;
+  overflow: hidden;
+  background: #1c3043;
+}
+.world-screen-frame img {
+  width: 100%;
+  height: clamp(190px, 31vw, 420px);
+  object-fit: cover;
+  object-position: center 46%;
+  animation: screen-enter 0.3s ease both;
+}
+@keyframes screen-enter {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.world-screen-frame .world-status {
+  position: absolute;
+  top: 11px;
+  inset-inline-start: 11px;
+}
+.world-screen .world-guide {
+  margin: 0;
+}
+.world-companion-grid,
+.world-badge-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.world-companion-card {
+  padding: 14px;
+  display: grid;
+  align-content: start;
+  gap: 9px;
+}
+.world-companion-card .companion-pic {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1.35;
+  border: 0;
+  border-radius: 13px;
+}
+.world-companion-card.selected {
+  border: 2px solid #3f9369;
+}
+.world-companion-card .btn {
+  justify-self: start;
+}
+.world-badges {
+  margin-bottom: 22px;
+}
+.world-badges > h2 {
+  margin-bottom: 10px;
+}
+.world-badge {
+  padding: 13px;
+  display: grid;
+  align-content: start;
+  gap: 7px;
+}
+.world-badge p {
+  color: #4d6660;
+}
+.world-badge > span {
+  display: grid;
+  place-items: center;
+  width: 47px;
+  height: 49px;
+  background: #e4ebea;
+  clip-path: polygon(50% 0, 96% 25%, 96% 76%, 50% 100%, 4% 76%, 4% 25%);
+}
+.world-badge.earned > span {
+  color: #5b3913;
+  background: linear-gradient(#ffecb6, #e2aa41);
+}
+.world-badge.locked h3 {
+  color: #526965;
+}
+.world-saved {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 7px;
+}
+.world-saved .btn {
+  justify-content: start;
+}
+.world-meter {
+  width: 100%;
+  height: 9px;
+  background: #d3e1d5;
+  overflow: hidden;
+  border-radius: 9px;
+}
+.world-meter > span {
+  height: 100%;
+  display: block;
+  width: var(--world-progress);
+  background: linear-gradient(90deg, #45975f, #95c853);
+  border-radius: inherit;
+  transition: width 0.23s ease;
+}
+.arcade-board,
+.world-game-result {
+  border: 1px solid #d6e4d8;
+  border-radius: 22px;
+  box-shadow: 0 5px 0 #c5d6cc;
+  padding: clamp(13px, 4vw, 24px);
+  display: grid;
+  gap: 12px;
+}
+.recycling-board {
+  background:
+    radial-gradient(ellipse at 50% 42%, #f5ffef 0%, transparent 65%), #e8f5e2;
+}
+.sort-item {
+  padding: 10px;
+  border: 2px dashed #b7d5b7;
+  border-radius: 16px;
+  text-align: center;
+}
+.sort-item > div {
+  font-size: clamp(3.7rem, 9vw, 5.7rem);
+  line-height: 1.15;
+}
+.sort-item h2 {
+  margin: 0;
+  font-size: 1.18rem;
+}
+.sort-bins {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 9px;
+}
+.sort-bin {
+  color: #183950;
+  background: linear-gradient(#d6f2fb, #b8def1);
+  border: 1px solid #9dc7da;
+  border-radius: 14px;
+  box-shadow: 0 4px 0 #8ab5ce;
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  gap: 8px;
+  min-height: 85px;
+  padding: 6px;
+  cursor: pointer;
+  font-weight: 900;
+}
+.sort-bin.organic {
+  color: #284b26;
+  background: linear-gradient(#e8f7d2, #c9e4aa);
+  border-color: #b1cc8d;
+  box-shadow: 0 4px 0 #9dbb7a;
+}
+.sort-bin:disabled {
+  opacity: 0.68;
+  cursor: default;
+}
+.sort-bin svg {
+  width: 26px;
+  height: 26px;
+}
+.arcade-feedback {
+  padding: 10px;
+  background: #fef4dd;
+  border-radius: 13px;
+}
+.arcade-feedback.correct {
+  background: #d8efd5;
+}
+.arcade-feedback .btn {
+  margin-top: 6px;
+}
+.lantern-board {
+  background:
+    radial-gradient(ellipse at 50% 30%, #293e57 0%, transparent 68%), #16283d;
+  color: #fff5e0;
+}
+.lantern-board .world-meter {
+  background: #385067;
+}
+.lantern-board .world-meter > span {
+  background: linear-gradient(90deg, #ffc85d, #fff0a0);
+}
+.lantern-status {
+  min-height: 26px;
+  color: #ffe69d;
+}
+.lantern-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 9px;
+}
+.lantern-pad {
+  --light: #6de1ca;
+  display: grid;
+  min-height: 95px;
+  gap: 6px;
+  align-content: center;
+  justify-items: center;
+  border-radius: 14px;
+  background: #233e54;
+  color: var(--light);
+  border: 1px solid var(--light);
+  box-shadow: inset 0 -4px #081b29;
+  cursor: pointer;
+  font-weight: 900;
+}
+.lantern-pad.amber {
+  --light: #ffce69;
+}
+.lantern-pad.purple {
+  --light: #deb0f9;
+}
+.lantern-pad.coral {
+  --light: #ffa395;
+}
+.lantern-pad svg {
+  width: 29px;
+  height: 29px;
+}
+.lantern-pad:disabled {
+  cursor: default;
+}
+.lantern-pad.active {
+  color: #152b3f;
+  background: var(--light);
+  box-shadow: 0 0 16px var(--light);
+}
+.world-game-result {
+  justify-items: center;
+  text-align: center;
+  background: radial-gradient(at 50% 0%, #fff4cd, #fffefa);
+}
+.world-game-result .star-row svg {
+  width: 33px;
+  height: 33px;
+}
+.world-game-result .center {
+  justify-content: center;
+}
+@media (max-width: 920px) {
+  .world-companion-grid,
+  .world-badge-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 720px) {
+  .world-portals {
+    margin: 15px 0;
+  }
+  .world-portal-grid,
+  .world-product-grid,
+  .world-games-grid,
+  .world-product.detail {
+    grid-template-columns: 1fr;
+  }
+  .world-portal {
+    min-height: 125px;
+  }
+  .world-portal img {
+    object-position: center 39%;
+  }
+  .world-guide {
+    flex-wrap: wrap;
+    padding: 8px;
+  }
+  .world-guide .btn {
+    padding-inline: 8px;
+  }
+  .world-head:has(img) {
+    min-height: 245px;
+    align-items: end;
+  }
+  .world-head:has(img)::before {
+    background: linear-gradient(
+      to top,
+      #142638 5%,
+      #142638bc 46%,
+      transparent 98%
+    );
+  }
+  .world-nav .btn {
+    padding-inline: 9px;
+  }
+  .lantern-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .lantern-pad {
+    min-height: 83px;
+  }
+}
